@@ -1,0 +1,825 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@keyframes zoom {
+    from{
+        scale: 1.1;
+    }
+    to{
+        scale: 1;
+    }
+    
+}
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    overflow: hidden;
+    position: relative;
+}
+
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #00fe9c;
+    position: fixed;
+    z-index: 99;
+}
+.logo{
+    padding: 25px 85px;
+    font-size: x-large;
+}
+.numbar i{
+    padding: 20px;
+    display: inline-block;
+    width: 64px;
+}
+.numbar a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.numbar {
+    padding: 10px 50px;
+    /* float: right; */
+    font-size: larger;
+}
+#profile{
+    background-color: #00fe9c;
+    /* height: 550px; */
+    padding-top: 100px;
+    animation-name: zoom;
+    animation-duration: 2s;
+}
+.profile-box1{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+.profile-left{
+    width: 50%;
+    height: 500px;
+    /* border: 2px solid black; */
+    line-height: 50px;
+    padding: 20px;
+}
+.profile-left h2{
+    margin-top: 50px;
+    font-size: 3em;
+    font-weight: 100;
+}
+.profile-left h1{
+    margin: 50px 0;
+    font-size: 7vw;
+    font-weight: 800;
+}
+.profile-left p{
+    margin: 40px 0 20px 0;
+    font-size: 2vw;
+    font-weight: 800;
+}
+.profile-left button{
+    padding: 10px 30px;
+    font-size: larger;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+.profile-left button:hover{
+    box-shadow: 0 0 10px black ;
+    background-color: rgb(45, 39, 39);
+}
+.profile-left span{
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 1.5em;
+    color: black;
+    position: relative;
+}
+.profile-left span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 40px;
+    height: 3px;
+    width: 0;
+    background-color: #333;
+    transition: all ease 2s;
+}
+.profile-left span:hover::after{
+    width: 100%;
+}
+.profile-right{
+    width: 50%;
+    height: 500px;
+    /* border: 2px solid black; */
+}
+.clint-photo{
+    width: 77%;
+    height: 450px;
+    border: 15px solid white;
+    margin: 5%;
+    border-radius: 50%;
+    border-top-color: #333;
+    overflow: hidden; 
+    /* animation: rotate 3s infinite; */
+}
+
+.clint-photo img{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+  }
+ 
+
+.about-me{
+    margin-top: 100px;
+    text-align: center;
+}
+.about-me p{
+    display: inline-block;
+    background-color: #00fe9c;
+    font-size: 20px;
+}
+.about-me h2{
+    font-size: 3em;
+}
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    animation-name: zoom;
+    animation-duration: 2s;
+}
+.about-me-box1{
+    float: left;
+    width: 60%;
+    padding: 70px;
+}
+.about-me-box1 h3{
+    font-size: 30px;
+    margin: 20px 0;
+}
+.about-me-box1 h3 span{
+    border-bottom: 2px solid #00fe9c;
+    font-size: 40px;
+    position: relative;
+}
+.about-me-box1 h3 span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 50px;
+    height: 5px;
+    width: 0;
+    background-color: #00fe9c;
+    transition: all ease 2s;
+}
+.about-me-box1 h3 span:hover::after{
+    width: 100%;
+}
+
+.about-me-box1 p{
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.exprince{
+    width: 30%;
+    float: right;
+    margin-top: 100px;
+}
+.exprince h3{
+    display: inline-block;
+    font-size: 9vw;
+    background-color: #00fe9c;
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 30px;
+}
+.exprince p{
+    font-size: 30px;
+}
+
+
+.pershnal-info{
+    margin: auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 30px;
+    padding: 100px 5px;
+}
+.pershnal-info a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+.project{
+    width: 100%;
+    text-align: center;
+    /* height: 600px; */
+    background-color: azure;
+}
+.project p{
+    margin-top: 100px;
+    /* padding-top: 100px; */
+    display: inline-block;
+    background-color: #00fe9c;
+    font-size: larger;
+}
+.project h2{
+    font-size: 3em;
+}
+.project-design{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+    /* height: 600px; */
+    margin-top: 50px;
+}
+.design{
+    /* border: 1px solid black; */
+    width: 30%;
+    /* height: 300px; */
+    margin: 10px;
+}
+.design p{
+    margin: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(31, 29, 29);
+    background-color: transparent;
+}
+#resume{
+    margin: auto;
+}
+.resume-part1{
+     width: 100%;
+    text-align: center;
+    /* height: 600px; */
+}
+.resume-part1 p{
+     margin-top: 100px;
+    /* padding-top: 100px; */
+    display: inline-block;
+    background-color: #00fe9c;
+    font-size: larger;
+}
+.resume-part1 h2{
+    font-size: 3em;
+}
+
+.resume-part2 {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+   /* border: 1px solid black; */
+   margin: auto;
+   padding-top: 100px;
+    /* height: 600px; */
+}
+.eduction{
+    width: 49%;
+    /* height: 600px; */
+    border-left:2px solid #00fe9c;
+    text-align: start;
+    padding:0 30px ;
+}
+.eduction h3{
+    font-size: 2em;
+    /* text-align: left; */
+}
+.eduction h4{
+    margin-top: 20px;
+    font-size: 2em;
+    font-weight: 300;
+}
+.eduction p{
+    margin-top: 4px;
+    font-weight: 100;
+    background-color: transparent;
+    padding: 10px 0 ;
+}
+.expreince{
+    width: 49%;
+    text-align: start;
+    padding: 0 30px 50px 30px;
+    border-left: 2px solid #00fe9c;
+}
+.expreince h3{
+    display: block;
+    font-size: 2em;
+}
+.expreince h4{
+    margin-top: 20px;
+    font-size: 2em;
+    font-weight: 300;
+}
+.skill{
+    width: 100%;
+    padding: 50px;
+    text-align: start;
+    font-size: 2em;
+    text-align: -webkit-center;
+    /* margin: auto; */
+}
+.skill-web{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: start;
+}
+.skill-web .frent-end{
+    width: 49%;
+    padding: 10px 20px;
+}
+.frent-end h5{
+    font-size: 20px;
+    font-weight: 100;
+    padding: 20px 5px;
+    display: inline-block;
+}
+.frent-end span{
+    font-size: 20px;
+    font-weight: 100;
+    padding: 10px;
+    float: right;
+}
+.bar-1{
+    width: 95%;
+    height: 7px;
+    /* border: 1px solid black; */
+    background-color: #f2eded;
+    /* margin: 2px; */
+    border-radius: 4px;
+    display: flex;
+    overflow: hidden;
+}
+.bar-2{
+    background-color: #00fe9c;
+}
+.skill .back-end{
+    width: 49%;
+    padding:0 30px;
+}
+.back-end h5{
+        font-size: 20px;
+        font-weight: 100;
+        padding: 20px 5px;
+        display: inline-block;
+}
+.back-end span{
+    font-size: 20px;
+    font-weight: 100;
+    padding: 10px;
+    float: right;
+}
+.skill button{
+    margin: 10px 35%;
+    padding: 10px 30px;
+    font-size: 20px;
+    border: 2px solid black;
+    /* background-color: #333; */
+    transition: all 1s;
+    cursor: pointer;
+}
+.skill button:hover{
+    color: white;
+    background-color: black;
+}
+/* protfolio */
+.protfolio-1{
+    margin-top: 100px;
+    text-align: center;
+}
+.protfolio-1 p{
+    display: inline-block;
+    background-color: #00fe9c;
+    font-size: 20px;
+}
+.protfolio-1 h2{
+    font-size: 3em;
+}
+.protfolio-img{
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.protfolio-img .folio-img{
+    width: 30%;
+    margin:10px auto;
+    position: relative;
+    overflow: hidden;
+    transition: all 3s;
+
+}
+.folio-img:hover .folio-content{
+    top: 0;
+}
+.protfolio-img .folio-img img{
+    width: 100%;
+}
+.folio-content img:hover{
+    scale: 1.1;
+}
+.protfolio-img .folio-content {
+    width: 100%;
+    position: absolute;
+    top: 100;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    height: 100%;
+    overflow: hidden;
+}
+
+.protfolio-img .folio-content img{
+    width: 32px;
+    margin: 40% 40% 0;
+    align-items: center;
+    /* vertical-align: middle; */
+}
+.protfolio-img .folio-content img:hover{
+    scale: 1.2;
+    animation: pluse 2s infinite;
+}
+@keyframes pluse {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.protfolio-img .folio-content h3{
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+.hire{
+    width: 100%;
+    height: 400px;
+    background-image: url(image/Hire-me.jpg);
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    margin: 50px 0;
+    text-align: center;
+}
+.hire h3{
+    font-size: 2em;
+    color: white;
+    padding: 150px 0 10px 0;
+}
+.hire button{
+    padding: 10px 25px;
+    font-size: large;
+    background-color: #00fe9c;
+    cursor: pointer;
+}
+.faq-section{
+    width: 90%;
+    margin:100px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.faq-part1{
+    width: 49%;
+
+}
+.faq-part1 p{
+    display: inline-block;
+    padding: 2px 10px;
+    background-color: #00fe9c;
+}
+.faq-part1 h2{
+    font-size: 2em;
+}
+h3 .faq-qsn{
+    margin-top: 50px;
+}
+.faq-part1 h3{
+    color: RGBA(0, 0, 0, 0.4);
+    padding: 20px 0;
+}
+.faq-part2{
+    width: 50%;
+}
+.faq-part2 img{
+    width: 100%;
+    /* height: 600px; */
+    /* padding: 50px; */
+}
+#clint{
+    background-color: #333;
+}
+.clint-part1{
+    padding: 100px 0 50px 0;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}
+.clint-part1 p{
+    display: inline-block;
+    background-color: #00fe9c;
+    padding: 4px 10px;
+    font-size: 20px;
+}
+.clint-part1 h2{
+    font-size: 2em;
+    color: white;
+}
+.clint-review{
+    text-align: center;
+    margin: auto;
+    width: 60%;
+    font-size: 2em;
+    color: white;
+}
+.clint-review p{
+    padding: 20px;
+}
+.clint-review span{
+    display: inline-block;
+    padding: 10px 0 50px 0;
+}
+footer{
+    background-color: #00fe9c;
+}
+.foot{
+    margin: auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.foot-part1{
+    padding: 100px 10px;
+    width: 50%;
+}
+.foot-part1 h3{
+    font-size: 2.5em;
+}
+.foot-part1 p{
+    font-size: 2em;
+    padding: 50px 30px 0 0 ;
+    font-weight: 200;
+}
+.foot-part1 h4{
+    font-size: x-large;
+    margin-top: 30px;
+}
+.foot-part1 a{
+    text-decoration: none;
+    color: black;
+}
+.foot-part2{
+    width: 50%;
+    padding: 100px 10px;
+}
+.foot-part2 h3{
+    font-size: 2.5em;
+}
+form{
+    padding: 50px 30px 0 0;
+    font-size: 20px;
+}
+form label{
+    margin: 20px 0;
+}
+form input{
+    background-color: transparent;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 20px;
+    border: none;
+    border-bottom: 2px solid rgba(47, 190, 54, 0.702);
+}
+form input:focus{
+    /* border: none; */
+    outline: none;
+     border-bottom: 2px solid rgb(17, 16, 16);
+}
+form textarea{
+    background-color: transparent;
+    width: 100%;
+    font-size: 20px;
+    border: none;
+    border-bottom: 2px solid rgba(47, 190, 54, 0.702);
+}
+form textarea:focus{
+    outline: none;
+    border-bottom: 2px solid black;
+}
+form button{
+    padding: 8px 40px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+form button:hover{
+    animation: zoom 2s infinite;
+}
+/* @keyframes zoom {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+} */
+.artist{
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 50px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.artist h6{
+    font-size: larger;
+}
+.artist a{
+ border-bottom: 2px solid #00fe9c;
+ position: relative;
+ color: #f2eded;
+ text-decoration: none;
+}
+.artist span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 30px;
+    height: 3px;
+    width: 0;
+    background-color: #00fe9c;
+    transition: all ease 2s;
+}
+.artist span:hover::after{
+    width: 100%;
+    border: none;
+}
+
+.icons a{
+    margin-left: 20px;
+    font-size: 2em;
+    padding: 1 0px;
+    border: none;
+    color: #00fe9c;
+}
+@media screen and (max-width:700px) {
+    header{
+        width: 100%;
+        margin: 0%;
+    }
+    .numbar{
+        padding: 0;
+    }
+    .logo{
+        padding: 10px;
+    }
+    .logo h2{
+        font-size: 1em;
+    }
+    .profile-box1{
+        width: 100%;
+    }
+    .profile-left h2, .about-me h2{
+        font-size: 2em;
+    }
+   
+    .about-me-box1 h3 span{
+        font-size: 20px;
+    }
+    .profile-left{
+        width: 100%;
+        height: auto;
+        line-height: normal;
+
+    }
+    .profile-left h2{
+        margin: 0%;
+
+    }
+    .profile-left h1, .profile-left p{
+        margin: 10px 0;
+        font-size: 1em;
+    }
+    
+    .profile-left span{
+        padding: 0%;
+        margin-left: 30px;
+    }
+    .profile-right{
+        width: 100%;
+        height: auto;
+    }
+    .clint-photo{
+        width: 90%;
+        height: 400px;
+    }
+    .about-me-box1{
+        width: 100%;
+        padding: 5px;
+    }
+    .exprince{
+        width: 100%;
+        /* margin: 50px 50px; */
+        margin-left: 80px;
+    }
+    .exprince h3{
+        align-items: center;
+        margin-left: 100px;
+    }
+    .pershnal-info{
+        padding: 20px;
+    }
+    .pershnal-info p{
+        width: 90%;
+        margin: 10px;
+        font-size: medium;
+    }
+    /* project */
+    .design{
+        width: 90%;
+        box-shadow: 0 0 10px #00fe9c;
+    }
+    .eduction{
+        width: 90%;
+    }
+    .expreince{
+        width: 90%;
+        margin-top: 50px;
+    }
+    .skill{
+        width: 100%;
+    }
+    .skill-web .frent-end{
+        width: 100%;
+        padding: 0;
+    }
+    
+    .skill-web .back-end{
+        width: 100%;
+        padding: 0;
+    }
+    .skill button{
+        margin:20px 20%;
+    }
+    .protfolio-img{
+        width: 100%;
+    }
+    .protfolio-img .folio-img{
+        width: 90%;
+    }
+    .hire{
+        width: 100%;
+        /* height: 700px; */
+        background-attachment: unset;
+        /* padding: 8% 0; */
+    }
+    .faq-part1{
+        width: 100%;
+    }
+    .faq-part2{
+        width: 100%;
+    }
+    .clint-review{
+        width: 100%;
+    }
+    .foot-part1{
+        width: 100%;
+        padding: 10px;
+    }
+    .foot-part2{
+        width: 100%;
+    }
+    .icons{
+        margin: 30px 5px;
+    }
+   
+}
